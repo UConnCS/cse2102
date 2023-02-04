@@ -1,0 +1,14 @@
+.DS_Store
+.vscode
+._.*
+*.aux
+*.log
+*.xdv
+*.gz
+*.fdb_latexmk
+*.fls
+*.out
+venv/
+_minted-report
+__pycache__
+*.zip

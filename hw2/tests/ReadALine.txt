@@ -1,0 +1,7 @@
+Test #1:
+- Input: Java is the language
+- Expected: Is the language java
+
+Test #2:
+- Input: This is a cool sentence
+- Expected: Is a cool sentence this

@@ -1,0 +1,15 @@
+Test #1:
+- Input: fta-avgs-1.txt
+- Expected: 
+
+The average score for for Joy is 50.00
+The average score for for Ecstasy is 80.00
+The average score for for Fantasy is 91.67
+
+Test #2:
+- Input: fta-avgs-2.txt
+- Expected:
+
+The average score for for Joy is 47.00
+The average score for for Ecstasy is 90.00
+The average score for for Fantasy is 88.33

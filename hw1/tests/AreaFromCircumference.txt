@@ -1,0 +1,7 @@
+Test #1:
+- Input: 20
+- Expected: 33.33
+
+Test #2:
+- Input: 40
+- Expected: 133.33

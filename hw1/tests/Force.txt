@@ -1,0 +1,7 @@
+Test #1:
+- Input: 1e+5, 2e+5, 1e+0
+- Expected: 1.33
+
+Test #2:
+- Input: 2e+3, 4e+8, 1e+2
+- Expected: 0.01

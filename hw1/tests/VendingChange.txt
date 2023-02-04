@@ -1,0 +1,7 @@
+Test #1:
+- Input: 45
+- Expected: 2 quarters, 0 dimes, 1 nickel
+
+Test #2:
+- Input: 90
+- Expected: 0 quarters, 1 dime, 0 nickels

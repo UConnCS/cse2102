@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{CSE2102 — Homework 1}
+\author{Mike Medved}
+\date{January 26th, 2023}
+
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[margin=1in]{geometry} 
+\usepackage[dvipsnames]{xcolor}
+
+\lstdefinestyle{Java}{
+    language     = Java,
+    aboveskip    = 3mm,
+    belowskip    = 3mm,
+    basicstyle   = \footnotesize\ttfamily,
+    keywordstyle = \color{blue},
+    stringstyle  = \color{green},
+    commentstyle = \color{red}\small\ttfamily
+}
+
+\begin{document}
+
+\maketitle
+
+\section*{Deliverables}
+
+\subsubsection*{Problem A}
+
+The value used for $\pi$, $\frac{22}{7}$, can be designated as \textbf{static final} in the code due to the fact that (a) the value is constant, and in Java, the final keyword designates constant values, and secondly (b) the fact that we are working with a static method (in this case, the main method) requires us to use the \textbf{static} keyword in order for the variable, PI, to be visible and accessible to the main method.
+
+\subsubsection*{Problem D}
+
+The problem with the physics student using the formula $F = G \cdot m_1 \cdot m_2 \text{ / } r \cdot r$ to compute the force of gravity, is that the Java does not innately have operator precedence in the way that they intended. Specifically, Java does apply order of operations to an extent, but requires the developer to indicate parentheses in order to denote the order of operations. In this case, the student intended for the formula to be $F = G \cdot \frac{m_1 \cdot m_2}{r^2}$, but the Java compiler interpreted the formula as $F = G \cdot \frac{m_1 \cdot m_2}{r} \cdot r$, which is incorrect. 
+
+$\hfill \break$
+In order to fix this, the student would have to use parentheses to denote the order of operations, as shown below:
+
+\begin{lstlisting}[style=Java]
+double force = G * ((m1 * m2) / (r * r));
+\end{lstlisting}
+
+\end{document}

@@ -1,0 +1,7 @@
+Test #1:
+- Input: 1101
+- Expected: 13
+
+Test #2:
+- Input: 1111
+- Expected: 15

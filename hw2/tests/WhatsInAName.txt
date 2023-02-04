@@ -1,0 +1,15 @@
+Test #1:
+- Input: Swapna Gokhale
+- Expected:
+
+Your first name is Swapna, which has 6 characters.
+Your last name is Gokhale, which has 7 characters.
+Your initials are SG
+
+Test #2:
+- Input: Mike Medved
+- Expected:
+
+Your first name is Mike, which has 4 characters.
+Your last name is Medved, which has 6 characters.
+Your initials are MM
