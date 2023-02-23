@@ -28,7 +28,7 @@ public class BinaryToDecimal {
 
             // Loop through each bit, and apply the multiplier (8, 4, 2, 1) to it.
             for (int i = 0; i < binary.length(); i++) {
-                int digit = Integer.parseInt(binary.substring(i, i + 1));
+                int digit = binary.charAt(i) == '1' ? 1 : 0;
                 result += digit * multiplier;
                 multiplier /= 2;
             }
