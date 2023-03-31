@@ -1,0 +1,51 @@
+﻿show_id,type,title,director,country,release_year,rating,duration,genre
+s1,Movie,Dick Johnson Is Dead,Kirsten Johnson,United States,2020,PG-13,90 min,Documentaries
+s2,TV Show,Blood & Water,,South Africa,2021,TV-MA,2 Seasons,"International TV Shows, TV Dramas, TV Mysteries"
+s3,TV Show,Ganglands,Julien Leclercq,,2021,TV-MA,1 Season,"Crime TV Shows, International TV Shows, TV Action & Adventure"
+s4,TV Show,Jailbirds New Orleans,,,2021,TV-MA,1 Season,"Docuseries, Reality TV"
+s5,TV Show,Kota Factory,,India,2021,TV-MA,2 Seasons,"International TV Shows, Romantic TV Shows, TV Comedies"
+s6,TV Show,Midnight Mass,Mike Flanagan,,2021,TV-MA,1 Season,"TV Dramas, TV Horror, TV Mysteries"
+s7,Movie,My Little Pony: A New Generation,"Robert Cullen, José Luis Ucha",,2021,PG,91 min,Children & Family Movies
+s8,Movie,Sankofa,Haile Gerima,"United States, Ghana, Burkina Faso, United Kingdom, Germany, Ethiopia",1993,TV-MA,125 min,"Dramas, Independent Movies, International Movies"
+s9,TV Show,The Great British Baking Show,Andy Devonshire,United Kingdom,2021,TV-14,9 Seasons,"British TV Shows, Reality TV"
+s10,Movie,The Starling,Theodore Melfi,United States,2021,PG-13,104 min,"Comedies, Dramas"
+s11,TV Show,"Vendetta: Truth, Lies and The Mafia",,,2021,TV-MA,1 Season,"Crime TV Shows, Docuseries, International TV Shows"
+s12,TV Show,Bangkok Breaking,Kongkiat Komesiri,,2021,TV-MA,1 Season,"Crime TV Shows, International TV Shows, TV Action & Adventure"
+s13,Movie,Je Suis Karl,Christian Schwochow,"Germany, Czech Republic",2021,TV-MA,127 min,"Dramas, International Movies"
+s14,Movie,Confessions of an Invisible Girl,Bruno Garotti,,2021,TV-PG,91 min,"Children & Family Movies, Comedies"
+s15,TV Show,Crime Stories: India Detectives,,,2021,TV-MA,1 Season,"British TV Shows, Crime TV Shows, Docuseries"
+s16,TV Show,Dear White People,,United States,2021,TV-MA,4 Seasons,"TV Comedies, TV Dramas"
+s17,Movie,Europe's Most Dangerous Man: Otto Skorzeny in Spain,"Pedro de Echave García, Pablo Azorín Williams",,2020,TV-MA,67 min,"Documentaries, International Movies"
+s18,TV Show,Falsa identidad,,Mexico,2020,TV-MA,2 Seasons,"Crime TV Shows, Spanish-Language TV Shows, TV Dramas"
+s19,Movie,Intrusion,Adam Salky,,2021,TV-14,94 min,Thrillers
+s20,TV Show,Jaguar,,,2021,TV-MA,1 Season,"International TV Shows, Spanish-Language TV Shows, TV Action & Adventure"
+s21,TV Show,Monsters Inside: The 24 Faces of Billy Milligan,Olivier Megaton,,2021,TV-14,1 Season,"Crime TV Shows, Docuseries, International TV Shows"
+s22,TV Show,Resurrection: Ertugrul,,Turkey,2018,TV-14,5 Seasons,"International TV Shows, TV Action & Adventure, TV Dramas"
+s23,Movie,Avvai Shanmughi,K.S. Ravikumar,,1996,TV-PG,161 min,"Comedies, International Movies"
+s24,Movie,Go! Go! Cory Carson: Chrissy Takes the Wheel,"Alex Woo, Stanley Moore",,2021,TV-Y,61 min,Children & Family Movies
+s25,Movie,Jeans,S. Shankar,India,1998,TV-14,166 min,"Comedies, International Movies, Romantic Movies"
+s26,TV Show,Love on the Spectrum,,Australia,2021,TV-14,2 Seasons,"Docuseries, International TV Shows, Reality TV"
+s27,Movie,Minsara Kanavu,Rajiv Menon,,1997,TV-PG,147 min,"Comedies, International Movies, Music & Musicals"
+s28,Movie,Grown Ups,Dennis Dugan,United States,2010,PG-13,103 min,Comedies
+s29,Movie,Dark Skies,Scott Stewart,United States,2013,PG-13,97 min,"Horror Movies, Sci-Fi & Fantasy"
+s30,Movie,Paranoia,Robert Luketic,"United States, India, France",2013,PG-13,106 min,Thrillers
+s31,Movie,Ankahi Kahaniya,"Ashwiny Iyer Tiwari, Abhishek Chaubey, Saket Chaudhary",,2021,TV-14,111 min,"Dramas, Independent Movies, International Movies"
+s32,TV Show,Chicago Party Aunt,,,2021,TV-MA,1 Season,TV Comedies
+s33,TV Show,Sex Education,,United Kingdom,2020,TV-MA,3 Seasons,"British TV Shows, International TV Shows, TV Comedies"
+s34,TV Show,Squid Game,,,2021,TV-MA,1 Season,"International TV Shows, TV Dramas, TV Thrillers"
+s35,TV Show,Tayo and Little Wizards,,,2020,TV-Y7,1 Season,Kids' TV
+s36,Movie,The Father Who Moves Mountains,Daniel Sandu,,2021,TV-MA,110 min,"Dramas, International Movies, Thrillers"
+s37,Movie,The Stronghold,Cédric Jimenez,,2021,TV-MA,105 min,"Action & Adventure, Dramas, International Movies"
+s38,TV Show,Angry Birds,,Finland,2018,TV-Y7,1 Season,"Kids' TV, TV Comedies"
+s39,Movie,Birth of the Dragon,George Nolfi,"China, Canada, United States",2017,PG-13,96 min,"Action & Adventure, Dramas"
+s40,TV Show,Chhota Bheem,,India,2021,TV-Y7,3 Seasons,Kids' TV
+s41,TV Show,He-Man and the Masters of the Universe,,United States,2021,TV-Y7,1 Season,"Kids' TV, TV Sci-Fi & Fantasy"
+s42,Movie,Jaws,Steven Spielberg,United States,1975,PG,124 min,"Action & Adventure, Classic Movies, Dramas"
+s43,Movie,Jaws 2,Jeannot Szwarc,United States,1978,PG,116 min,"Dramas, Horror Movies, Thrillers"
+s44,Movie,Jaws 3,Joe Alves,United States,1983,PG,98 min,"Action & Adventure, Horror Movies, Thrillers"
+s45,Movie,Jaws: The Revenge,Joseph Sargent,United States,1987,PG-13,91 min,"Action & Adventure, Horror Movies, Thrillers"
+s46,Movie,My Heroes Were Cowboys,Tyler Greco,,2021,PG,23 min,Documentaries
+s47,Movie,Safe House,Daniel Espinosa,"South Africa, United States, Japan",2012,R,115 min,Action & Adventure
+s48,TV Show,The Smart Money Woman,Bunmi Ajakaiye,,2020,TV-MA,1 Season,"International TV Shows, Romantic TV Shows, TV Comedies"
+s49,Movie,Training Day,Antoine Fuqua,United States,2001,R,122 min,"Dramas, Thrillers"
+s50,TV Show,Castle and Castle,,Nigeria,2021,TV-MA,2 Seasons,"International TV Shows, TV Dramas"
