@@ -1,6 +1,5 @@
 package hw4;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,36 +9,6 @@ public class Movie {
     private String name;
     private MipaaRating rating;
     private Map<Integer, Integer> ratings;
-
-    // Create an enum for the MIPAA ratings so we can validate against it later
-    public enum MipaaRating {
-        G("G"),
-        PG("PG"),
-        PG_13("PG-13"),
-        R("R"),
-        NC_17("NC-17");
-
-        private String name;
-
-        // Private constructor for above enum constants
-        MipaaRating(String rating) {
-            this.name = rating;
-        }
-
-        // Return the name of the current MipaaRating
-        public String getName() {
-            return name;
-        }
-
-        // Helper method to translate a string -> MipaaRating constant
-        public static MipaaRating fromString(String input) {
-            return Arrays
-                .stream(values())
-                .filter(rating -> rating.getName().equalsIgnoreCase(input))
-                .findFirst()
-                .orElse(null);
-        }
-    }
 
     // Constructor for Movie class, takes in a name and MipaaRating
     public Movie(String name, MipaaRating rating) {

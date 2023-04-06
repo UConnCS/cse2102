@@ -1,4 +1,4 @@
-package co.m1ke.project.tester;
+package co.m1ke.project.tester1;
 
 import co.m1ke.project.content.Movie;
 import co.m1ke.project.content.TvShow;

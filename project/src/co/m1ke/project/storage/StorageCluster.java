@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 
 /**
  * This class is an adapter for Storage shards, and dynamically creates them based on the class of the object being stored.
@@ -39,6 +40,11 @@ public class StorageCluster {
         Arrays
                 .stream(classes)
                 .forEach(this::register);
+    }
+
+    public <T> void add(T object, String keyField) {
+        List<T> arr = Arrays.asList(object);
+        this.addMany(arr, keyField);
     }
 
     /**
@@ -76,6 +82,19 @@ public class StorageCluster {
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public void remove(String key) {
+        this.shards.forEach((clazz, shard) -> shard.remove(key));
+    }
+
+    public <T> List<T> search(Class<T> target, Predicate<T> predicate) {
+        Storage<T> cluster = this.getCluster(target);
+        if (cluster == null) {
+            return null;
+        }
+
+        return cluster.search(predicate);
     }
 
     /**

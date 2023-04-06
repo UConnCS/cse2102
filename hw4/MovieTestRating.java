@@ -2,8 +2,6 @@ package hw4;
 
 import java.util.Scanner;
 
-import hw4.Movie.MipaaRating;
-
 public class MovieTestRating {
     
     public static void main(String[] args) {
@@ -45,7 +43,7 @@ public class MovieTestRating {
             }
 
             // Print the movie's name, MIPAA rating, and average ratings
-            System.out.println("Name of the movie: The Hunger Games");
+            System.out.println("Name of the movie: " + movie.getName());
             System.out.println("MIPAA rating: " + movie.getRating().getName());
             System.out.println("Average rating: " + movie.getAverage());
         }

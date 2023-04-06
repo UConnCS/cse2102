@@ -1,7 +1,10 @@
 package co.m1ke.project.storage;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -74,6 +77,13 @@ public class Storage<T> {
      */
     public Stream<Map.Entry<String, T>> stream() {
         return this.stash.entrySet().stream();
+    }
+
+    public List<T> search(Predicate<T> predicate) {
+        return this
+                .streamValues()
+                .filter(predicate)
+                .collect(Collectors.toList());
     }
 
     /**
