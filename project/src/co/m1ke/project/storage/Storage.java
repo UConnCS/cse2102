@@ -79,6 +79,11 @@ public class Storage<T> {
         return this.stash.entrySet().stream();
     }
 
+    /**
+     * Search the Storage for a value that matches the given predicate.
+     * @param predicate The predicate to search for.
+     * @return A list of values that match the given predicate.
+     */
     public List<T> search(Predicate<T> predicate) {
         return this
                 .streamValues()

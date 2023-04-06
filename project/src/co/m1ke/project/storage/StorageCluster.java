@@ -42,6 +42,15 @@ public class StorageCluster {
                 .forEach(this::register);
     }
 
+    /**
+     * Adds a single object to the StorageCluster by first finding the appropriate
+     * registered Shard for the class of the object, and then by using reflection,
+     * serializing the object using the given key field string.
+     *
+     * @param object The object to add to the StorageCluster.
+     * @param keyField The field to serialize the object by.
+     * @param <T> The type of object to store.
+     */
     public <T> void add(T object, String keyField) {
         List<T> arr = Arrays.asList(object);
         this.addMany(arr, keyField);
@@ -52,6 +61,7 @@ public class StorageCluster {
      * finding the appropriate registered Shard for the class of the object,
      * and then by using reflection, serializing the object(s) using the
      * given key field string.
+     *
      * @param objects The list of objects to add to the StorageCluster.
      * @param keyField The field to serialize the object(s) by.
      * @param <T> The type of object to store.
@@ -84,10 +94,25 @@ public class StorageCluster {
         }
     }
 
+    /**
+     * Removes a key from all instances of the cluster.
+     * @param key The key to remove.
+     */
     public void remove(String key) {
         this.shards.forEach((clazz, shard) -> shard.remove(key));
     }
 
+    /**
+     * Get an object from the StorageCluster by first finding the appropriate
+     * registered Shard for the class of the object, and then by using reflection,
+     * serializing the object using the given key field string.
+     *
+     * @param target The class of the object to get.
+     * @param predicate The predicate to use to find the object.
+     * @param <T> The type of object to store.
+     *
+     * @return The object that was found, or null if none was found.
+     */
     public <T> List<T> search(Class<T> target, Predicate<T> predicate) {
         Storage<T> cluster = this.getCluster(target);
         if (cluster == null) {

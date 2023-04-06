@@ -36,7 +36,7 @@ public enum TitleSelector {
         return displayName;
     }
 
-    // Helper method to translate a string -> TesterMode constant
+    // Helper method to translate a string -> TitleSelector constant
     public static TitleSelector fromString(String value) {
         return Arrays
                 .stream(values())
