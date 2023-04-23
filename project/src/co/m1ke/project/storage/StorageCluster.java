@@ -132,4 +132,24 @@ public class StorageCluster {
         return (Storage<T>) this.shards.get(clazz);
     }
 
+    /**
+     * Downlevels an abstractive layer and recombines all shards of a given type into a single Storage.
+     * @param clazzes The classes to de-abstractify.
+     * @return The Storage containing all objects of the given classes.
+     * @param <M> The type of object to store.
+     */
+    public <M> Storage<M> abstractify(Class<?> ...clazzes) {
+        Storage<M> storage = new Storage<>();
+        for (Class<?> clazz : clazzes) {
+            Storage<?> shard = this.getCluster(clazz);
+            if (shard == null) {
+                continue;
+            }
+
+            shard.stream().forEach(ent -> storage.add(ent.getKey(), (M) ent.getValue()));
+        }
+
+        return storage;
+    }
+
 }

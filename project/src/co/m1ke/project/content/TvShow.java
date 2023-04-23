@@ -49,8 +49,33 @@ public class TvShow extends Watchable {
 
     @Override
     public String toString() {
-        // Return a formatted string with all the information about the TV show.
-        return String.format("TV Show ID: %s\nTitle: %s\nDirector: %s\nCountry: %s\nRelease Year: %d\nRating: %s\nSeasons: %d\nGenre: %s",
-                this.getShowId(), this.getTitle(), this.getDirector(), this.getCountry(), this.getReleaseYear(), rating, seasons, this.getGenre());
+        // Return a formatted string with all the information about the movie.
+        String title = this.getTitle().contains(",")
+                ? "\"" + this.getTitle() + "\""
+                : this.getTitle();
+
+        String director = this.getDirector().contains(",")
+                ? "\"" + this.getDirector() + "\""
+                : this.getDirector();
+
+        String country = this.getCountry().contains(",")
+                ? "\"" + this.getCountry() + "\""
+                : this.getCountry();
+
+        String genre = this.getGenre().contains(",")
+                ? "\"" + this.getGenre() + "\""
+                : this.getGenre();
+
+        return String.format(String.join(",",
+                this.getShowId(),
+                "TV Show",
+                title,
+                director,
+                country,
+                String.valueOf(this.getReleaseYear()),
+                this.getRating().getName(),
+                this.getSeasons() + " Seasons",
+                genre));
     }
+
 }

@@ -6,15 +6,14 @@ import co.m1ke.project.content.Watchable;
 import co.m1ke.project.rating.MovieRating;
 import co.m1ke.project.rating.TvRating;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * This class parses CSV files into a list of typed Watchable subclasses, and
@@ -136,6 +135,51 @@ public class CsvParser {
             // Handle any errors that arise when parsing the line.
             System.err.println("Error parsing line: " + line);
             return null;
+        }
+    }
+
+    /**
+     * Converts a watchable-like object to a CSV line.
+     * @param obj The object to convert.
+     * @param <T> The type of Watchable to convert to.
+     * @return The CSV line.
+     */
+    public static <T extends Watchable> String toCsvLine(T obj) {
+        return obj.toString();
+    }
+
+    /**
+     * Saves some lines to a CSV file.
+     *
+     * @param path The path to the file to save to.
+     * @param header The header line to write.
+     * @param lines The lines to write.
+     */
+    public static void saveToCsv(String path, String header, List<String> lines) {
+        try {
+            // Create a new file, and write the header line.
+            File file = new File(path);
+            if (file.exists()) {
+                file.delete();
+            }
+
+            file.createNewFile();
+
+            FileWriter writer = new FileWriter(file);
+            writer.write(header + "\n");
+
+            // Write all lines to the file.
+            for (String line : lines) {
+                writer.write(line + "\n");
+            }
+
+            // Close the writer.
+            writer.close();
+            System.out.println("Saved " + lines.size() + " records to [" + path + "].");
+        } catch (IOException exception) {
+            // Handle any errors that arise when writing to the file.
+            System.err.println("Error writing to file.");
+            exception.printStackTrace();
         }
     }
 

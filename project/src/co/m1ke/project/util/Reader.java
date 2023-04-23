@@ -49,7 +49,31 @@ public class Reader {
 
             // Print the error message, and then reprompt the user for a valid input.
             System.out.println(message);
-            return read(scanner, null, converter);
+            return read(scanner, prompt, converter);
+        }
+    }
+
+    public static <T> T process(String prompt, Scanner scanner, String input, Function<String, T> converter) {
+        try {
+            // Read the input, convert it, and return it.
+            T object = converter.apply(input);
+
+            // If the object is null or cannot be converted, throw an exception.
+            if (object == null) throw new InvalidInput("Invalid input");
+
+            // Otherwise, return the object.
+            return object;
+        } catch (Exception ex) {
+            // If the exception is an InvalidInput, get the message from it.
+            String message = "Invalid parameters";
+            if (ex.getClass().isAssignableFrom(InvalidInput.class)) {
+                final String invalidMessage = ex.getMessage();
+                if (!invalidMessage.equals("")) message = invalidMessage;
+            }
+
+            // Print the error message, and then reprompt the user for a valid input.
+            System.out.println(message);
+            return read(scanner, prompt, converter);
         }
     }
 

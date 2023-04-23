@@ -50,8 +50,32 @@ public class Movie extends Watchable {
     @Override
     public String toString() {
         // Return a formatted string with all the information about the movie.
-        return String.format("Movie ID: %s\nTitle: %s\nDirector: %s\nCountry: %s\nRelease Year: %d\nRating: %s\nDuration: %d\nGenre: %s",
-                this.getShowId(), this.getTitle(), this.getDirector(), this.getCountry(), this.getReleaseYear(), rating, duration, this.getGenre());
+        String title = this.getTitle().contains(",")
+                ? "\"" + this.getTitle() + "\""
+                : this.getTitle();
+
+        String director = this.getDirector().contains(",")
+                ? "\"" + this.getDirector() + "\""
+                : this.getDirector();
+
+        String country = this.getCountry().contains(",")
+                ? "\"" + this.getCountry() + "\""
+                : this.getCountry();
+
+        String genre = this.getGenre().contains(",")
+                ? "\"" + this.getGenre() + "\""
+                : this.getGenre();
+
+        return String.format(String.join(",",
+                this.getShowId(),
+                "Movie",
+                title,
+                director,
+                country,
+                String.valueOf(this.getReleaseYear()),
+                this.getRating().getName(),
+                this.getDuration() + " min",
+                genre));
     }
 
 }
