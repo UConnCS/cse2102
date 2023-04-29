@@ -231,7 +231,7 @@ public class Tester {
                             newRating = rating.getName();
                         }
 
-                        // Save the cluster to disk and print a confirmation to the console.
+                        // Save the cluster to disk and print a confirmation to the consoleh.
                         saveAll(cluster, path);
                         System.out.println("Updated rating to: " + newRating);
                         break;
